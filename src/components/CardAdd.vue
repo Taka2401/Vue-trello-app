@@ -46,13 +46,13 @@ export default {
     }
   },
   methods: {
-    startEditing: function() {
+    startEditing() {
     this.isEditing = true
     },
-    finishEditing: function() {
+    finishEditing() {
       this.isEditing = false
     },
-    addCardToList: function() {
+    addCardToList() {
       // dispatchでactionsに定義したaddCardToListを実行する
       this.$store.dispatch('addCardToList', { body: this.body, listIndex: this.listIndex })
       this.body = ''

@@ -16,7 +16,7 @@
 </template>
 <script>
 export default {
-  data: function() {
+  data() {
     return {
       title: '',
       isEditing: false,
@@ -25,6 +25,7 @@ export default {
   computed: {
     classList() {
       const classList = ['addlist']
+      // isEditingがtrueならactiveクラスを追加
       if (this.isEditing) {
         classList.push('active')
       }
@@ -38,14 +39,16 @@ export default {
     },
   },
   methods: {
-    addList: function() {
+    addList() {
       this.$store.dispatch('addlist', { title: this.title })
       this.title = ''
     },
-    startEditing: function() {
+    // フォーカスされた時
+    startEditing() {
       this.isEditing = true
     },
-    finishEditing: function() {
+    // フォーカスしていない時
+    finishEditing() {
       this.isEditing = false
     },
   }

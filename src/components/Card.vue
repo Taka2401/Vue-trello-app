@@ -26,7 +26,7 @@ export default {
     }
   },
   methods: {
-    removeCardFromList: function() {
+    removeCardFromList() {
       if(confirm('本当にこのカードを削除しますか？')) {
         this.$store.dispatch('removeCardFromList', { cardIndex: this.cardIndex, listIndex: this.listIndex })
       }

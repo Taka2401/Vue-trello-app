@@ -53,7 +53,7 @@ export default {
   },
   methods: {
     // 削除する
-    removeList: function() {
+    removeList() {
       if(confirm('本当にこのリストを削除しますか？')){
         // index.jsのremovelistを呼び出す
         this.$store.dispatch('removelist', { listIndex: this.listIndex })

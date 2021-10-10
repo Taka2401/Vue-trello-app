@@ -40,10 +40,10 @@ export default {
     }
   },
   methods: {
-    movingCard: function() {
+    movingCard() {
       this.$store.dispatch('updateList', { lists: this.lists })
     },
-    movingList: function() {
+    movingList() {
       this.$store.dispatch('updateList', { lists: this.lists })
     }
   }
